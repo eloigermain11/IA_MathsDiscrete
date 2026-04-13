@@ -63,8 +63,7 @@ std::shared_ptr<Tensor> Operations::multiplication_matricielle(std::shared_ptr<T
     }
 
     // Résultat (M x N)
-    auto resultat = std::make_shared<Tensor>({nombre_lignes_a, nombre_colonnes_b});
-
+    auto resultat = std::make_shared<Tensor>(std::vector<int>{nombre_lignes_a, nombre_colonnes_b});
     // Forward Pass (Triple boucle for), produit scalaire
     for (int ligne = 0; ligne < nombre_lignes_a; ++ligne) {
         for (int colonne = 0; colonne < nombre_colonnes_b; ++colonne) {

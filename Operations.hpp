@@ -6,10 +6,10 @@
 
 class Operations {
 public:
-    static std::shared_ptr<Tensor> add(std::shared_ptr<Tensor> a, std::shared_ptr<Tensor> b);
-    static std::shared_ptr<Tensor> matmul(std::shared_ptr<Tensor> a, std::shared_ptr<Tensor> b);
+    static std::shared_ptr<Tensor> addition(std::shared_ptr<Tensor> a, std::shared_ptr<Tensor> b);
+    static std::shared_ptr<Tensor> multiplication_matricielle(std::shared_ptr<Tensor> a, std::shared_ptr<Tensor> b);
     static std::shared_ptr<Tensor> relu(std::shared_ptr<Tensor> a);
-    // ... ajoute les autres ici (sigmoid, softmax, etc.)
+    
 };
 
 #endif

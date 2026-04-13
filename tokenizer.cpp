@@ -19,8 +19,9 @@ long long pair_to_long_long(int tok1, int tok2) {
 
 
 
+// *****************************JAI EXCLU DU BUILD TOKENIZER.CPP A CAUSE DU MAIN TU PEUX LE REMETTRE QUAND TU TRAVAILLERAS DESSUS******************************
 
-void main() {
+int main() {
 
 
 int vocab_count = 2000;
@@ -48,16 +49,24 @@ Repeat 3-4 until you hit your target vocab size.
 Save the merge rules in order.
 */
 
+
+// *************jai changer 2-3 trucs ca compilait pas
+
 while (x < vocab_count) {
 
-    for (var byte of initial_tokens){
-    long long key = pair_to_long_long(tok1, tok2);
-    frequency_count[key] ++;
-    }
+    for (size_t i = 0; i < initial_tokens.size() - 1; ++i) {
 
+        int tok1 = initial_tokens[i];
+        int tok2 = initial_tokens[i + 1];
+
+        long long key = pair_to_long_long(tok1, tok2);
+        frequency_count[key]++;
+    }
 
     x++;
 }
+
+return 0;
 
 
 
